@@ -42,7 +42,7 @@ python manage.py runserver
 
 ## Contact Me 
 ### Murari Sabavath
-[Github](https://github.com/MurariSabavath) <br>
-[Instagram](https://www.instagram.com/murari_sabavath/)
-[Gmail](mailto:murarisabavath3676@gmail.com)
-[Twitter](https://twitter.com/MurariSabavath_)
+[Github](https://github.com/MurariSabavath) <br> 
+[Instagram](https://www.instagram.com/murari_sabavath/) <br>
+[Gmail](mailto:murarisabavath3676@gmail.com) <br>
+[Twitter](https://twitter.com/MurariSabavath_) <br>
