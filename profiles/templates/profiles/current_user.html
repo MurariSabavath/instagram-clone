@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock nav %}
+
+{% block content %}
+
+<div class="container pt-5">
+    <div id="profile" class="profile-div"></div>
+    <hr>
+    <div id="posts"></div>
+    <div class="d-flex justify-content-center" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div> 
+    <div class="container card border-0 p-0">
+        <button class="btn btn-outline-info btn-block" id="load-more">Load More</button>
+    </div>
+    <div class="card border-0">
+        <div class="alert alert-info not-visible" id="end-block">
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'profiles/current_user.js' %}"></script>
+{% endblock scripts %}

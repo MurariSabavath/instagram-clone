@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    /* background-color: #fafafa; */
+}
+
+body {
+    padding-top: 70px;
+}
+.navbar {
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navbar div {
+    padding: 0 5px;
+}
+
+.not-visible {
+    display: none;
+}
+
+.errorlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: auto;
+    background: none;
+    margin: 20px auto;
+    border-radius: 0;
+}
+
+.card-body {
+    padding: 0.5rem;
+}
+
+.home-profile-pic {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.card-profile {
+    display: grid;
+    grid-template-columns: 40px auto;
+}   
+
+.card-profile div:nth-child(2) {
+    vertical-align: center;
+    align-items: baseline;
+}
+
+svg path{
+    stroke-width: 1px;
+}
+
+.profile-form-div {
+    width: 40%;
+    margin: auto;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.profile-div {
+    width: 70%;
+    display: grid;
+    grid-template-areas: "a b b"
+                         "a c c";
+}
+.user-profile-image {
+    grid-area: a;
+}
+.user-details {
+    grid-area: b;
+}
+.user-bio {
+    grid-area: c;
+}
+.user-username {
+    display: inline-block;
+}
+
+.circle-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.align-none {
+    text-align: left;
+}
+
+.details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.inline {
+    display: inline-block;
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.btn-outline a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+@media  screen and (max-width: 500px) {
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+    .profile-div {
+        grid-template-areas: "a b b"
+                             "c c c";
+    }
+    .user-username {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        width: 100%;
+    }
+    .circle-img {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-div {
+        width: 100%;
+    }
+}

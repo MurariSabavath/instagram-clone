@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock nav %}
+
+{% block content %}
+
+<div class="container mt-2 p-3">
+    <div class="container border border-lightgrey justify-content-md-center p-3 pb-2">
+        <form method="post" class="mt-2" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in u_form %}
+                {{ field }}
+            {% endfor %}
+            {% for field in p_form %}
+                {{ field }}
+            {% endfor %}
+            <button class="btn btn-primary w-100 font-weight-bold" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

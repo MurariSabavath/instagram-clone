@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block nav %}
+{% include 'nav.html' %}
+{% endblock nav %}
+
+{% block content %}
+
+<div class="profile-div container pt-5">
+    <div class="user-profile-image">
+            <img src="{{ user.profile.image.url }}"  alt="" class="circle-img">
+    </div>
+    <div class="align-none user-detials mt-2 ml-2">
+        <h4 class=" text-muted user-username">{{ request.user.username }}</h4>
+        <button class="btn-outline">
+            <a href="{% url 'logout' %}" class="mt-2 text-muted">Logout</a>
+        </button>
+        <button class="btn-outline ml-2">
+            <a href="{% url 'edit_profile' username=request.user.username %}" class="mt-2 text-muted">Edit Profile</a>
+        </button>
+    </div>
+    <div class="user-bio  text-muted mt-2 ml-2">
+        <div class="details">
+            <div>
+                <h6 class="inline">{{ no_posts }}</h6> 
+                <h6 class="inline">Posts</h6>
+            </div>
+            <div>
+                <h6 class="inline">{{ followers }}</h6> 
+                <h6 class="inline">Followers</h6>
+            </div>
+            <div>
+                <h6 class="inline">{{ following }}</h6> 
+                <h6 class="inline">Following</h6>
+            </div>
+        </div>
+        <div class="text-muted">
+            <p>{{ bio }}</p>
+        </div>
+        </div>
+    </div> 
+    <hr>
+    
+    <div id="posts"></div>
+    <div class="d-flex justify-content-center" id="spinner">
+        <div class="spinner-border" role="status">
+            <span class="sr-only"></span>
+        </div>
+    </div> 
+    <div class="container card border-0 p-0">
+        <button class="btn btn-outline-info btn-block" id="load-more">Load More</button>
+    </div>
+    <div class="card border-0">
+        <div class="alert alert-info not-visible" id="end-block">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'profiles/index.js' %}"></script>
+{% endblock scripts %}
