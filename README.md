@@ -17,15 +17,16 @@ pip install -r requiremnts.txt
 ### Usage
 - Create a ``.env`` file.
 - Declare following environment variables in the .env file.
-> ```
+```
 > SECRET_KEY = 'secret key'
 > DEBUG = True
 > EMAIL_USERNAME = 'your email address'
 > EMAIL_PASSWORD = 'your password' 
-> ```
+```
 - Now make the migrations.
 ```
 python manage.py migrate
+```
 - Commit the migrations.
 ```
 python manage.py makemigrations
@@ -42,6 +43,7 @@ python manage.py runserver
 
 ## Contact Me 
 ### Murari Sabavath
+
 [Github](https://github.com/MurariSabavath) <br> 
 [Instagram](https://www.instagram.com/murari_sabavath/) <br>
 [Gmail](mailto:murarisabavath3676@gmail.com) <br>
