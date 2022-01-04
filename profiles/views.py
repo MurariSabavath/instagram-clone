@@ -158,14 +158,13 @@ def edit_profile_view(request, username):
         return redirect('login')
     if request.method == 'POST':
         u_form = UpdateUserForm(request.POST, instance=request.user)
-        profile_pic = request.user.profile.image.path
         p_form = UpdateProfileForm(
             request.POST, request.FILES, instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
             messages.success(request, 'Your profile has been updated')
-            return redirect('user_profile', username=request.user.username)
+            return redirect('user_profile')
 
     u_form = UpdateUserForm(instance=request.user)
     p_form = UpdateProfileForm(instance=request.user.profile)
