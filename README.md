@@ -1,5 +1,10 @@
 ## Django Instagram Clone
 Instagram clone using python django with a lot of Instagram features.
+
+## Preview
+![Home Page](https://github.com/MurariSabavath/instagram-clone/blob/d7d525fc867b9192c66f28e729e3ce1b365bb836/img/home.png)
+![Profile Page](https://github.com/MurariSabavath/instagram-clone/blob/d7d525fc867b9192c66f28e729e3ce1b365bb836/img/profile.png)
+
 #### Give a star if you like it.
 ## Features
 - User authentication(Sign up and sign in).
