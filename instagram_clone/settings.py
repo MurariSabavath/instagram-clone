@@ -19,7 +19,6 @@ INSTALLED_APPS = [
     'posts.apps.PostsConfig',
     'profiles.apps.ProfilesConfig',
     'crispy_forms',
-    'storages'
 ]
 
 MIDDLEWARE = [
@@ -107,18 +106,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('EMAIL_USERNAME')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
-
-# aws_secret_access_key
-
-# AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-# AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACESS_KEY')
-# AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL = None
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# # In India these settings work
-# AWS_S3_REGION_NAME = "ap-south-1"
-# AWS_S3_SIGNATURE_VERSION = "s3v4"
